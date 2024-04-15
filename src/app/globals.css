@@ -3,31 +3,120 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --titleFont: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --bodyFont: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --font-h1: clamp(3.2rem, 0.5692rem + 8.238vw, 10rem);
+  --font-h2: clamp(1.5rem, 1.0982rem + 1.7143vw, 2.8125rem);
+  --font-h3: clamp(1.375rem, 1.1837rem + 0.8163vw, 2rem);
+  --font-h4: clamp(1.375rem, 1.1837rem + 0.8163vw, 1.6rem);
+  --font-h5: clamp(1rem, 0.9235rem + 0.3265vw, 1.25rem);
+  --font-h6: clamp(1rem, 0.9617rem + 0.1633vw, 1.125rem);
+  --font-body: clamp(1rem, 0.8852rem + 0.4898vw, 1.375rem);
+
+  --color-primary: #243c24;
+
+  --color-blue: hsla(204, 97%, 54%, 1);
+  --color-lightblue: hsla(208, 90%, 40%, 1);
+  --color-lightgrey: hsla(0, 0%, 97%, 1);
+  --color-mint: hsla(172, 45%, 75%, 1);
+  --color-lilac: hsla(227, 65%, 87%, 1);
+  --color-rust: hsla(22, 62%, 76%, 1);
+  --color-babyblue: hsla(206, 84%, 86%, 1);
+  --color-pink: hsla(284, 61%, 74%, 1);
+
+  --color-green300: hsla(159, 42%, 88%, 1);
+  --color-green400: hsla(160, 52%, 71%, 1);
+  --color-green500: hsla(172, 95%, 18%, 1);
+  --color-green600: hsla(171, 15%, 35%, 1);
+  --color-green700: hsla(171, 11%, 24%, 1);
+  --color-green800: hsla(158, 23%, 18%, 1);
+
+  /* light */
+  --color-text-primary: var(--color-green500);
+  --color-text-secondary: var(--color-green600);
+  --color-text-bold: var(--color-green700);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    
+  }
+} */
+
+html,
+body {
+  background: #eee7de;
+  font-family: var(--font-family-body);
+  font-size: 16px;
+  color: var(--color-text-secondary);
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-heading);
+}
+
+.font-body {
+  font-family: var(--font-family-body) !important;
+}
+
+div.child {
+  position: absolute;
+  filter: blur(100px);
+  opacity: 0.7;
+  -webkit-filter: blur(100px);
+}
+.one {
+  border-radius: 100%;
+  width: 125%; /* Scaled size */
+  height: 125%; /* Scaled size */
+  background-color: #e3fbee;
+  left: -25%; /* Scaled position */
+  top: -75%; /* Scaled position */
+  z-index: 3;
+  animation: fly 12s linear infinite;
+}
+.two {
+  width: 125%; /* Scaled size */
+  height: 200%; /* Scaled size */
+  background-color: #A0D4FF;
+  bottom: -7.5%; /* Scaled position */
+  left: -20%; /* Scaled position */
+}
+.three {
+  border-radius: 100%;
+  width: 112.5%; /* Scaled size */
+  height: 112.5%; /* Scaled size */
+  bottom: -20%; /* Scaled position */
+  right: -25%; /* Scaled position */
+  background-color: #748494; /* indigo */
+  animation: flyPlus 10s linear infinite;
+}
+.four {
+  border-radius: 100%;
+  width: 87.5%; /* Scaled size */
+  height: 87.5%; /* Scaled size */
+  margin: auto;
+  bottom: 0;
+  right: 0;
+  background-color: #FFE7B8; /* yellow */
+  animation: flyPlus 15s linear infinite;
+}
+
+@keyframes fly {
+  100% {
+    transform: rotate(2turn) translate(25vw) rotate(-2turn);
   }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@keyframes flyPlus {
+  100% {
+    transform: rotate(-2turn) translate(25vw) rotate(2turn);
   }
 }

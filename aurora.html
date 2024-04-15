@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Aurora UI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+      }
+      body {
+        background: #f2f4f6;
+      }
+      .animated {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .wrapper {
+        width: 50vw; /* Responsive width */
+        height: 50vw; /* Responsive height, maintaining aspect ratio */
+        max-width: 400px; /* Maximum size */
+        max-height: 400px; /* Maximum size */
+        background: #fff;
+        position: relative;
+        overflow: hidden;
+      }
+      .wrapper div {
+        position: absolute;
+        filter: blur(50px);
+        opacity: 0.8;
+        -webkit-filter: blur(50px);
+      }
+      .animated .one {
+        border-radius: 100%;
+        width: 150%; /* Scaled size */
+        height: 150%; /* Scaled size */
+        background-color: #a960ee;
+        left: -25%; /* Scaled position */
+        top: -75%; /* Scaled position */
+        z-index: 3;
+        animation: fly 12s linear infinite;
+      }
+      .animated .two {
+        width: 125%; /* Scaled size */
+        height: 200%; /* Scaled size */
+        background-color: #ff333d;
+        bottom: -7.5%; /* Scaled position */
+        left: -20%; /* Scaled position */
+      }
+      .animated .three {
+        border-radius: 100%;
+        width: 112.5%; /* Scaled size */
+        height: 112.5%; /* Scaled size */
+        bottom: -20%; /* Scaled position */
+        right: -25%; /* Scaled position */
+        background-color: #ffcb57;
+        animation: flyPlus 10s linear infinite;
+      }
+      .four {
+        border-radius: 100%;
+        width: 87.5%; /* Scaled size */
+        height: 87.5%; /* Scaled size */
+        margin: auto;
+        bottom: 0;
+        right: 0;
+        background-color: #90e0ff;
+        animation: flyPlus 15s linear infinite;
+      }
+      .animated .wrapper .text {
+        font-size: 60px;
+        font-weight: bold;
+        color: #fff;
+        opacity: 1;
+        filter: unset;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 99;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      @keyframes fly {
+        100% {
+          transform: rotate(2turn) translate(25vw) rotate(-2turn);
+        }
+      }
+      @keyframes flyPlus {
+        100% {
+          transform: rotate(-2turn) translate(25vw) rotate(2turn);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="animated">
+      <div class="wrapper">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+        <div class="text">Stripe</div>
+      </div>
+    </div>
+  </body>
+</html>
