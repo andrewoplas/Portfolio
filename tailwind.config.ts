@@ -8,6 +8,21 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: {
+        text: "text 5s ease infinite",
+      },
+      keyframes: {
+        text: {
+          "0%, 100%": {
+            "background-size": "200% 200%",
+            "background-position": "left center",
+          },
+          "50%": {
+            "background-size": "200% 200%",
+            "background-position": "right center",
+          },
+        },
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -21,10 +36,24 @@ const config: Config = {
         h5: "var(--font-h5)",
         h6: "var(--font-h6)",
         body: "var(--font-body)",
+        "body-large": "var(--font-body-large)",
+      },
+      fontFamily: {
+        heading: ["var(--font-family-heading)"],
+        body: ["var(--font-family-body)"],
+      },
+      borderRadius: {
+        button: "10px",
+        card: "24px",
       },
       colors: {
-        textPrimary: "var(--color-text-primary)",
-        textSecondary: "var(--color-text-secondary)",
+        primary: "var(--color-primary)",
+        secondary: "var(--color-secondary)",
+        accent: "var(--color-accent)",
+        background: "var(--color-background)",
+        "t-primary": "var(--color-text-primary)",
+        "t-secondary": "var(--color-text-secondary)",
+
         textBold: "var(--color-text-bold)",
         appBlue: "var(--color-blue)",
         appLightblue: "var(--color-lightblue)",
@@ -37,6 +66,17 @@ const config: Config = {
       },
       boxShadow: {
         cards: "0px 50px 100px -20px rgba(0, 0, 0, .15)",
+      },
+      gridTemplateColumns: {
+        "32": "repeat(32, minmax(0, 1fr))",
+      },
+      gridColumn: {
+        "span-13": "span 13 / span 13",
+        "span-14": "span 14 / span 14",
+        "span-15": "span 15 / span 15",
+      },
+      maxWidth: {
+        section: "1600px",
       },
     },
   },
