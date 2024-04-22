@@ -1,17 +1,19 @@
-import { AboutSection } from "./components/about-section";
-import { ExperienceSection } from "./components/experience-section";
+import { Footer } from "@/components/footer";
+import { HeroSection } from "./components/1-hero";
+import { ProjectsSection } from "./components/2-projects";
+import { AboutSection } from "./components/3-about";
+import { TestimonialSection } from "./components/4-testimonial";
 import { Header } from "./components/header";
-import { HeroSection } from "./components/hero-section";
-import { ProjectsSection } from "./components/projects-section";
 
-export default function Home() {
-  return (
-    <div className="h-[9000px]">
-      <Header />
-      <HeroSection />
-      <ProjectsSection />
-      <AboutSection />
-      <ExperienceSection />
-    </div>
-  );
-}
+const Home = () => (
+  <div>
+    <Header />
+    <HeroSection />
+    <ProjectsSection />
+    <AboutSection />
+    <TestimonialSection />
+    <Footer />
+  </div>
+);
+
+export default Home;
