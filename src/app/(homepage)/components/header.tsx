@@ -50,7 +50,7 @@ export const Header = () => {
           "bg-white/70 backdrop-blur-lg": isActive,
         })}
       >
-        <ul className="flex gap-x-1">
+        <ul className="flex gap-0 md:gap-x-1">
           {routes.map((route) => (
             <li
               key={route.name}
@@ -58,7 +58,13 @@ export const Header = () => {
               onClick={() => setActiveItem(route.path)}
             >
               <Link
-                className="relative z-10 block px-5 py-3 leading-none"
+                className={cn(
+                  "relative z-10 block px-3 py-2 sm:px-5 sm:py-3 text-xs leading-none md:text-sm uppercase font-semibold",
+                  {
+                    "text-background": !isActive,
+                    "text-primary font-bold": activeItem === route.path,
+                  },
+                )}
                 href={route.path}
               >
                 {route.name}
@@ -67,7 +73,12 @@ export const Header = () => {
               {activeItem === route.path && (
                 <motion.div
                   layoutId="active-item"
-                  className="absolute left-0 top-0 h-full w-full rounded-[200px] bg-white/40 backdrop-blur-lg"
+                  className={cn(
+                    "absolute left-0 top-0 h-full w-full rounded-[200px] bg-white/40 backdrop-blur-lg",
+                    {
+                      "bg-white/70": !isActive,
+                    },
+                  )}
                   transition={{
                     type: "spring",
                     duration: 0.55,
