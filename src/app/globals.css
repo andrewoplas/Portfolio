@@ -2,33 +2,96 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --font-h1: clamp(4rem, 7.5rem, 12vw);
-  --font-h2: clamp(3.5rem, 6rem, 9vw);
-  --font-h3: clamp(3rem, 4.5rem, 7vw);
-  --font-h4: clamp(2.5rem, 3.35rem, 6vw);
-  --font-h5: clamp(2rem, 2.65rem, 5vw);
-  --font-h6: clamp(1.25rem, 1.75rem, 4vw);
-  --font-body-large: clamp(1.25rem, 1.35rem, 2.5vw);
-  --font-body: clamp(1rem, 1.125rem, 2vw);
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
 
-  --color-primary: #132a13;
-  --color-secondary: #ffed53;
-  --color-accent: #ff7f50;
-  --color-background: #f9f6f1;
-  --color-text-primary: #203636;
-  --color-text-secondary: #696969;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+
+    --radius: 0.5rem;
+  }
+
+  :root {
+    --font-h1: clamp(4rem, 7.5rem, 12vw);
+    --font-h2: clamp(3.5rem, 6rem, 9vw);
+    --font-h3: clamp(3rem, 4.5rem, 7vw);
+    --font-h4: clamp(2.5rem, 3.35rem, 6vw);
+    --font-h5: clamp(2rem, 2.65rem, 5vw);
+    --font-h6: clamp(1.25rem, 1.75rem, 4vw);
+    --font-body-large: clamp(1.15rem, 1.35rem, 2.5vw);
+    --font-body: clamp(1rem, 1.125rem, 2vw);
+
+    --color-primary: #132a13;
+    --color-secondary: #ffed53;
+    --color-accent: #ff7f50;
+    --color-background: #f9f6f1;
+    --color-text-primary: #203636;
+    --color-text-secondary: #696969;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    
+@layer base {
+  .px-default {
+    @apply px-8 md:px-10;
   }
-} */
+}
 
 html,
 body {
-  background: #eee7de;
   font-family: var(--font-family-body);
   font-size: 16px;
   scroll-behavior: smooth;
@@ -41,4 +104,14 @@ h4,
 h5,
 h6 {
   font-family: var(--font-family-heading);
+}
+
+::-moz-selection {
+  color: white;
+  background: var(--color-primary);
+}
+
+::selection {
+  color: white;
+  background: var(--color-primary);
 }
