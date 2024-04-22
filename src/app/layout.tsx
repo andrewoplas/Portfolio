@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Noto_Sans, Source_Sans_3 } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Footer } from "@/components/footer";
 
 const heading = localFont({
   src: [
@@ -47,7 +48,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${body.variable} ${heading.variable}`}>
-      <body className="overflow-x-hidden bg-background">{children}</body>
+      <body className="overflow-x-hidden">
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
