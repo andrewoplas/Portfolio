@@ -1,26 +1,62 @@
-import { Button } from "@/components/button";
+"use client";
+
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 export const HeroSection = () => (
   <section id="hello" className="w-full bg-primary">
     <div className="relative z-[1] -mb-[30%] md:-mb-[12%]">
-      <h1 className="relative px-4 pt-32 text-center text-h1 font-bold leading-none text-background md:pt-44">
-        <div>
+      <h1 className="relative px-4 pt-32 text-center text-h3 sm:text-h1 font-bold leading-none text-background md:pt-44">
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            easings: ["easeIn", "easeOut"],
+            duration: 0.5,
+          }}
+        >
           Hi. I’m <span className="text-secondary">Andrew.</span>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            easings: ["easeIn", "easeOut"],
+            duration: 0.5,
+            delay: 0.25,
+          }}
+        >
           A <span className="text-secondary">Developer.</span>
-        </div>
+        </motion.div>
       </h1>
 
-      <p className="mx-auto mt-6 max-w-[550px] px-4 text-center text-body-large text-background">
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          ease: "linear",
+          duration: 0.5,
+          delay: 1,
+        }}
+        className="mx-auto mt-6 max-w-[400px] sm:max-w-[550px] px-4 text-center text-body-large text-background"
+      >
         Turning Coffee into Code: Crafting Fun, Functional, and Fabulous
         Software!
-      </p>
+      </motion.p>
 
-      <div className="mt-6 text-center md:mt-10">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          ease: "linear",
+          duration: 0.5,
+          delay: 1,
+        }}
+        className="mt-6 text-center md:mt-10"
+      >
         <Button href="#projects">View Projects</Button>
-      </div>
+      </motion.div>
     </div>
 
     <Image

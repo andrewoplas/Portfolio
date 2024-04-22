@@ -1,20 +1,19 @@
 "use client";
 
-import { Button } from "@/components/button";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { link } from "fs";
+import { motion, useScroll, useTransform, Variants } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 
 const workExperiences = [
   {
-    company: "Algert",
-    role: "Lead Developer",
-    year: "22~",
-    className: "md:col-start-[16] md:col-span-13",
-    link: "https://algert.co/",
+    company: "Rococo",
+    role: "Full Stack Developer",
+    year: "19–21",
+    className: "md:col-span-11 row-start-3",
+    link: "https://rococoglobaltechnologies.com/",
   },
   {
     company: "CodeChum",
@@ -24,13 +23,26 @@ const workExperiences = [
     link: "https://www.codechum.com/",
   },
   {
-    company: "Rococo",
-    role: "Full Stack Developer",
-    year: "19–21",
-    className: "md:col-span-11 row-start-3",
-    link: "https://rococoglobaltechnologies.com/",
+    company: "Algert",
+    role: "Lead Developer",
+    year: "22~",
+    className: "md:col-start-[16] md:col-span-13",
+    link: "https://algert.co/",
   },
 ];
+
+const animation: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      staggerChildren: 0.25,
+      when: "beforeChildren",
+      easings: ["easeIn", "easeOut"],
+    },
+  },
+};
 
 export const AboutSection = () => {
   const sectionRef = useRef(null);
@@ -54,12 +66,12 @@ export const AboutSection = () => {
             <span className="hidden sm:inline">oo</span>?!
           </h3>
           <p className="text-body-large">
-            In 2014, I entered a web development contest without knowing any
-            coding, driven by my curiosity and lots of late-night studying. Even
-            though I finished last, it didn't stop me; it was just the
-            beginning. Now, I've used that experience to grow, and today I'm
-            making creative software for everyone from exciting new startups to
-            big companies.
+            In 2014, with just a little knowledge about coding, my curiosity led
+            me to enter a web development contest. Countless late nights of
+            studying didn't secure a win, as I finished last, but that didn't
+            deter me—it was merely the starting line. This experience fueled my
+            growth, and today, I develop creative software solutions for
+            everyone from innovative startups to major corporations.
             <br />
             <br />
             Right now, I'm focused on making user interfaces that are easy to
@@ -86,13 +98,13 @@ export const AboutSection = () => {
         </div>
       </div>
 
-      <div className="mt-16">
+      <section className="pt-16" id="experience">
         <h2 className="mx-auto max-w-[30rem] text-center text-h4 font-bold leading-none text-t-primary md:mx-0 md:text-left">
           What’s my work experience?
         </h2>
 
         <div className="mt-8 text-center md:mt-14 md:text-left">
-          <Button href="#" target="_blank" className="group" variant="outline">
+          <Button href="/andrew-oplas-resume.pdf" target="_blank" className="group" variant="outline">
             <div className="flex items-center gap-4">
               <span>VIEW FULL RESUME</span>
               <svg
@@ -115,38 +127,41 @@ export const AboutSection = () => {
           </Button>
         </div>
 
-        <section
+        <motion.div
           className="grid-cols-30 mt-14 grid gap-y-3 md:-mt-[10%]"
-          id="experience"
+          variants={animation}
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.55 }}
         >
           {workExperiences.map((workExperience) => (
             <div
               key={workExperience.company}
-              className={cn(
-                "relative flex items-center rounded-card bg-primary p-6 text-background transition-all duration-300  hover:drop-shadow-2xl hover:shadow-secondary hover:-translate-y-1 hover:saturate-200 md:px-7 md:py-8",
-                workExperience.className,
-              )}
+              className={workExperience.className}
             >
-              <Link
-                href={workExperience.link}
-                target="_blank"
-                className="absolute left-0 top-0 h-full w-full"
-              ></Link>
-              <div className="flex-1">
-                <h3 className="font-body text-2xl font-bold">
-                  {workExperience.company}
-                </h3>
-                <p className="font-body text-secondary">
-                  {workExperience.role}
-                </p>
-              </div>
-              <span className="font-heading text-h6 font-bold">
-                {workExperience.year}
-              </span>
+              <motion.div initial={{ opacity: 0, y: 25 }} variants={animation}>
+                <div className="relative flex items-center rounded-card bg-primary p-6 text-background transition-all duration-300  hover:-translate-y-1 hover:shadow-secondary hover:drop-shadow-2xl hover:saturate-200 md:px-7 md:py-8">
+                  <Link
+                    href={workExperience.link}
+                    target="_blank"
+                    className="absolute left-0 top-0 h-full w-full"
+                  ></Link>
+                  <div className="flex-1">
+                    <h3 className="font-body text-2xl font-bold">
+                      {workExperience.company}
+                    </h3>
+                    <p className="font-body text-secondary">
+                      {workExperience.role}
+                    </p>
+                  </div>
+                  <span className="font-heading text-h6 font-bold">
+                    {workExperience.year}
+                  </span>
+                </div>
+              </motion.div>
             </div>
           ))}
-        </section>
-      </div>
+        </motion.div>
+      </section>
     </section>
   );
 };

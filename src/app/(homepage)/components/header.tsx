@@ -62,7 +62,7 @@ export const Header = () => {
                   "relative z-10 block px-3 py-2 sm:px-5 sm:py-3 text-xs leading-none md:text-sm uppercase font-semibold",
                   {
                     "text-background": !isActive,
-                    "text-primary font-bold": activeItem === route.path,
+                    "font-bold": activeItem === route.path,
                   },
                 )}
                 href={route.path}
@@ -74,9 +74,9 @@ export const Header = () => {
                 <motion.div
                   layoutId="active-item"
                   className={cn(
-                    "absolute left-0 top-0 h-full w-full rounded-[200px] bg-white/40 backdrop-blur-lg",
+                    "absolute left-0 top-0 h-full w-full rounded-[200px] bg-white/40 backdrop-blur-lg shadow-md",
                     {
-                      "bg-white/70": !isActive,
+                      "bg-white/10": !isActive,
                     },
                   )}
                   transition={{
