@@ -7,7 +7,7 @@ import Image from "next/image";
 export const HeroSection = () => (
   <section id="hello" className="w-full bg-primary">
     <div className="relative z-[1] -mb-[30%] md:-mb-[12%]">
-      <h1 className="relative px-4 pt-32 text-center text-h3 sm:text-h1 font-bold leading-none text-background md:pt-44">
+      <h1 className="relative px-4 pt-32 text-center text-h3 font-bold leading-none text-background sm:text-h1 md:pt-44">
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
@@ -39,7 +39,7 @@ export const HeroSection = () => (
           duration: 0.5,
           delay: 1,
         }}
-        className="mx-auto mt-6 max-w-[400px] sm:max-w-[550px] px-4 text-center text-body-large text-background"
+        className="mx-auto mt-6 max-w-[400px] px-4 text-center text-body-large text-background sm:max-w-[550px]"
       >
         Turning Coffee into Code: Crafting Fun, Functional, and Fabulous
         Software!
@@ -65,6 +65,7 @@ export const HeroSection = () => (
       height={579}
       alt=""
       className="h-[400px] w-screen object-cover lg:h-auto lg:w-screen"
+      priority
     />
   </section>
 );

@@ -50,7 +50,7 @@ export const AboutSection = () => {
     target: sectionRef,
     offset: ["start end", "end start"],
   });
-  const translateY = useTransform(scrollYProgress, [0, 0.65], ["30%", "5%"]);
+  const translateY = useTransform(scrollYProgress, [0, 0.65], ["20%", "0%"]);
 
   return (
     <section
@@ -93,6 +93,7 @@ export const AboutSection = () => {
               width={951}
               height={913}
               className="relative h-full w-full object-contain"
+              quality={100}
             />
           </motion.div>
         </div>
@@ -104,7 +105,12 @@ export const AboutSection = () => {
         </h2>
 
         <div className="mt-8 text-center md:mt-14 md:text-left">
-          <Button href="/andrew-oplas-resume.pdf" target="_blank" className="group" variant="outline">
+          <Button
+            href="/andrew-oplas-resume.pdf"
+            target="_blank"
+            className="group"
+            variant="outline"
+          >
             <div className="flex items-center gap-4">
               <span>VIEW FULL RESUME</span>
               <svg

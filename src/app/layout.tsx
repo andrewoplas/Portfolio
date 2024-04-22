@@ -1,8 +1,8 @@
+import { Footer } from "@/components/footer";
 import type { Metadata } from "next";
-import { Noto_Sans, Source_Sans_3 } from "next/font/google";
+import { Source_Sans_3 } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-import { Footer } from "@/components/footer";
 
 const heading = localFont({
   src: [
