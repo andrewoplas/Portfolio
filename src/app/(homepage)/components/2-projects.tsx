@@ -81,7 +81,7 @@ const animation: Variants = {
 export const ProjectsSection = () => (
   <section
     id="projects"
-    className="mx-auto max-w-section px-4 py-16 md:px-8 md:py-20 lg:py-24"
+    className="px-default mx-auto max-w-section py-16 md:py-20 lg:py-24"
   >
     <h2 className="text-center text-h2 font-bold text-t-primary">
       Bits & Bytes
@@ -144,7 +144,7 @@ const ProjectItem = ({ work }: ProjectItemProps) => (
 
     <div
       className={cn(
-        "h-full w-full overflow-hidden rounded-card px-6 py-5 text-right text-textBold transition-all duration-500 hover:-translate-y-[6px] hover:shadow-cards hover:saturate-[1.2] md:px-8 md:py-7 lg:px-10 lg:py-8",
+        "text-textBold h-full w-full overflow-hidden rounded-card px-6 py-5 text-right transition-all duration-500 hover:-translate-y-[6px] hover:shadow-cards hover:saturate-[1.2] md:px-8 md:py-7 lg:px-10 lg:py-8",
         work.bgClass,
       )}
     >

@@ -54,7 +54,7 @@ const animation: Variants = {
 export const TestimonialSection = () => (
   <section
     id="testimonial"
-    className="mx-auto max-w-screen-xl px-4 py-16 md:px-8 md:py-20 lg:py-24"
+    className="px-default mx-auto max-w-screen-xl py-16 md:py-20 lg:py-24"
   >
     <h2 className="text-center text-h2 font-bold text-t-primary">
       Voices of Confidence
@@ -68,7 +68,7 @@ export const TestimonialSection = () => (
       className="mt-12 grid gap-6 md:mt-16 md:grid-cols-2 lg:grid-cols-3"
       variants={animation}
       whileInView="visible"
-      viewport={{ once: true, amount: 0.55 }}
+      viewport={{ once: true, amount: 0.35 }}
     >
       {testimonials.map((testimonial) => (
         <motion.div

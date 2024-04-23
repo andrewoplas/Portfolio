@@ -56,7 +56,7 @@ export const AboutSection = () => {
     <section
       ref={sectionRef}
       id="about"
-      className="mx-auto max-w-section px-4 py-16 md:px-8 md:py-20 lg:py-24"
+      className="mx-auto max-w-section px-default py-16 md:py-20 lg:py-24"
     >
       <div className="relative grid grid-cols-1 rounded-card bg-primary md:grid-cols-12">
         <div className="z-[1] col-span-8 self-center px-6 py-8 text-background sm:px-8 md:py-8 md:pl-8 lg:col-span-7 lg:py-14 lg:pl-14">
