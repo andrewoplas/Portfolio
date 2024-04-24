@@ -16,6 +16,10 @@ type Props = {
   };
 };
 
+export const generateStaticParams = async () => {
+  return ["pos", "marigold", "digirent", "goodtime"].map((slug) => ({ slug }));
+};
+
 export const generateMetadata = ({ params }: Props): Metadata => {
   const project = projects.find((project) => project.slug === params.slug);
 
@@ -57,7 +61,7 @@ const Project = async ({ params }: Props) => {
           {project.title}
         </h1>
 
-        <div className="max-w-post-content mx-auto mt-12 grid gap-4 gap-y-6 md:mt-16 md:grid-cols-3 lg:mt-20">
+        <div className="mx-auto mt-12 grid max-w-post-content gap-4 gap-y-6 md:mt-16 md:grid-cols-3 lg:mt-20">
           <div>
             <span className="mb-3 block text-sm text-accent">Timeline</span>
             <span className="font-heading text-lg font-bold text-t-primary sm:text-xl lg:text-2xl">
@@ -106,7 +110,7 @@ const Project = async ({ params }: Props) => {
       )}
 
       {project.contents.length && (
-        <div className="px-default max-w-post-content mx-auto mt-16 space-y-20 text-t-primary md:mt-20">
+        <div className="px-default mx-auto mt-16 max-w-post-content space-y-20 text-t-primary md:mt-20">
           {project.contents.map((content) =>
             content.isFullWidth ? (
               <div key={content.title}>
@@ -131,7 +135,7 @@ const Project = async ({ params }: Props) => {
         </div>
       )}
 
-      <div className="px-default max-w-post-images mx-auto mt-24 grid grid-cols-12 gap-8 md:gap-12">
+      <div className="px-default mx-auto mt-24 grid max-w-post-images grid-cols-12 gap-8 md:gap-12">
         {project.photos.slice(1).map((photo) => (
           <Image
             key={photo.alt}
