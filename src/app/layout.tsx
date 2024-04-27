@@ -40,6 +40,7 @@ const body = Source_Sans_3({
 export const metadata: Metadata = {
   title: "Andrew Oplas",
   description: "Andrew Oplas is a Software Developer.",
+  metadataBase: new URL("https://www.andrewoplas.com"),
 };
 
 export default function RootLayout({
