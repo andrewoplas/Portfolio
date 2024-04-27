@@ -176,21 +176,21 @@ export const projects = [
     role: "Web Developer",
     photos: [
       {
-        photoSrc: "/images/goodtime/goodtime-banner.png ",
+        photoSrc: "/images/goodtime/goodtime-banner.png",
         alt: "screenshot of the homepage on a macos display",
       },
       {
-        photoSrc: "/images/goodtime/goodtime-elementor-edit-screen.png ",
+        photoSrc: "/images/goodtime/goodtime-elementor-edit-screen.png",
         alt: "screenshot of elementor edit screen",
         className: "lg:col-span-12",
       },
       {
-        photoSrc: "/images/goodtime/goodtime-ai-powered-screen.png ",
+        photoSrc: "/images/goodtime/goodtime-ai-powered-screen.png",
         alt: "screenshot of ai powered screen",
         className: "lg:col-span-6",
       },
       {
-        photoSrc: "/images/goodtime/goodtime-automated-screen.png ",
+        photoSrc: "/images/goodtime/goodtime-automated-screen.png",
         alt: "screenshot of automated screen",
         className: "lg:col-span-6",
       },
