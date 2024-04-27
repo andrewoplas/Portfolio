@@ -118,8 +118,8 @@ export const Footer = () => (
 
       <div className="flex items-center gap-6 text-base md:text-lg">
         <p className="font-heading font-light">© 2024 Andrew Oplas</p>
-        <span>·</span>
-        <p className="font-heading font-light">Colophon</p>
+        {/* <span>·</span>
+        <p className="font-heading font-light">Colophon</p> */}
       </div>
     </div>
   </footer>
