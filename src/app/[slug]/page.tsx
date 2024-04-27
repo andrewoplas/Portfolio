@@ -74,7 +74,7 @@ const Project = async ({ params }: Props) => {
                         alt={`photo of ${teammate.name}`}
                         width={100}
                         height={100}
-                        className="z-[1] block h-8 w-8 rounded-full bg-neutral-200 outline outline-2 outline-white"
+                        className="z-[1] block h-8 w-8 rounded-full bg-neutral-200 outline outline-2 outline-white transition-transform duration-150 hover:-translate-y-1"
                       />
                     </TooltipTrigger>
                     <TooltipContent>{teammate.name}</TooltipContent>
