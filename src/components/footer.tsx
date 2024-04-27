@@ -16,7 +16,7 @@ export const Footer = () => (
       <Button
         href="mailto:hello@andrewoplas.com"
         variant="outline"
-        className="group mt-12 flex items-center gap-3 border border-white text-white hover:!transform-none hover:bg-white hover:text-t-primary"
+        className="group mt-12 flex items-center gap-3 border border-white text-white hover:!transform-none hover:bg-white hover:text-t-primary lowercase"
       >
         <div className="w-6 overflow-hidden transition-[transform,opacity,width] duration-200 group-hover:w-0 group-hover:opacity-0">
           <svg
