@@ -38,7 +38,8 @@ const body = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-  title: "Andrew Oplas — Software Developer",
+  title: "Andrew Oplas",
+  description: "Andrew Oplas is a Software Developer.",
 };
 
 export default function RootLayout({

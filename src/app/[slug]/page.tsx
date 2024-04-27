@@ -20,12 +20,6 @@ export const generateStaticParams = async () => {
   return ["pos", "marigold", "digirent", "goodtime"].map((slug) => ({ slug }));
 };
 
-export const generateMetadata = ({ params }: Props): Metadata => {
-  const project = projects.find((project) => project.slug === params.slug);
-
-  return { title: project?.title };
-};
-
 const Project = async ({ params }: Props) => {
   const project = projects.find((project) => project.slug === params.slug);
 
