@@ -14,7 +14,7 @@ export const Footer = () => (
       </h2>
 
       <Button
-        href="mailto:hello@andrewoplas.dev"
+        href="mailto:hello@andrewoplas.com"
         variant="outline"
         className="group mt-12 flex items-center gap-3 border border-white text-white hover:!transform-none hover:bg-white hover:text-t-primary"
       >
@@ -37,7 +37,7 @@ export const Footer = () => (
             />
           </svg>
         </div>
-        hello@andrewoplas.dev
+        hello@andrewoplas.com
         <svg
           className="group-hover:opacity-1 mb-1 h-6 w-0 translate-x-full opacity-0 transition-[transform,opacity,width] duration-200 group-hover:w-6 group-hover:translate-x-0 group-hover:opacity-100"
           width="26"
