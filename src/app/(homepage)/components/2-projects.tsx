@@ -96,7 +96,7 @@ export const ProjectsSection = () => (
       className="mx-auto mt-14 grid grid-cols-1 items-center justify-center gap-8 lg:mt-20 lg:grid-cols-12 lg:gap-14"
       variants={animation}
       whileInView="visible"
-      viewport={{ once: true, amount: 0.35 }}
+      viewport={{ once: true, amount: 0.25 }}
     >
       {works.map((work) => (
         <div className={work.span} key={work.projectName}>
