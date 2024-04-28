@@ -105,7 +105,8 @@ export const ProjectsSection = () => (
       ))}
     </motion.div>
 
-    <div className="mt-16 flex items-center justify-end lg:mt-24">
+    {/* TODO: Implement archive page */}
+    {/* <div className="mt-16 flex items-center justify-end lg:mt-24">
       <Link
         href="archive"
         className="flex gap-4 bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text
@@ -114,7 +115,7 @@ export const ProjectsSection = () => (
       >
         Browse Projects <div className="-mt-1">→</div>
       </Link>
-    </div>
+    </div> */}
   </section>
 );
 
