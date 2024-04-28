@@ -5,10 +5,10 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
-import { Metadata } from "next";
 import Image from "next/image";
-import { projects } from "./data";
 import Link from "next/link";
+import { projects } from "./data";
+import { redirect } from "next/navigation";
 
 type Props = {
   params: {
@@ -24,7 +24,7 @@ const Project = async ({ params }: Props) => {
   const project = projects.find((project) => project.slug === params.slug);
 
   if (!project) {
-    return null;
+    return redirect("/");
   }
 
   return (
@@ -39,7 +39,7 @@ const Project = async ({ params }: Props) => {
           viewBox="0 0 26 26"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="md:-mt-[1px] mt-[1px] w-4 h-4 md:w-6 md:h-6"
+          className="h-4 w-4 md:-mt-[1px] md:h-6 md:w-6"
         >
           <path
             fillRule="evenodd"
@@ -144,6 +144,43 @@ const Project = async ({ params }: Props) => {
             )}
           />
         ))}
+      </div>
+
+      <div className="px-default mt-48">
+        <h2 className="text-center text-h3 font-bold text-t-primary">
+          Discover More
+        </h2>
+
+        <div className="mx-auto mt-12 grid max-w-post-images grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+          {projects
+            .filter((project) => project.slug !== params.slug)
+            .slice(0, 3)
+            .map((project) => (
+              <div className="relative overflow-hidden rounded-card shadow-xl shadow-neutral-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-neutral-200">
+                <Link
+                  href={`/${project.slug}`}
+                  className="absolute h-full w-full"
+                ></Link>
+
+                <Image
+                  src={project.thumbnail}
+                  alt={`thumbnail of ${project.title}`}
+                  width={1000}
+                  height={551}
+                  className="aspect-[1000/551] w-full"
+                />
+
+                <div className="bg-white p-6 md:p-8">
+                  <h4 className="font-body text-base uppercase tracking-widest text-t-secondary">
+                    {project.company}
+                  </h4>
+                  <h3 className="text-h5 font-bold leading-tight text-t-primary md:text-h6">
+                    {project.title}
+                  </h3>
+                </div>
+              </div>
+            ))}
+        </div>
       </div>
     </section>
   );

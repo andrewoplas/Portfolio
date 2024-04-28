@@ -2,12 +2,14 @@ export const projects = [
   {
     slug: "pos",
     title: "point of sale",
+    company: 'EJJY',
     timeline: "2021-2024",
     team: [
       { name: "J. Maranga", photoSrc: "/images/avatar-default.png" },
       { name: "Andrew Oplas", photoSrc: "/images/avatar-andrew-oplas.png" },
     ],
     role: "Full Stack Developer",
+    thumbnail: "/images/pos/pos-thumbnail.png",
     photos: [
       {
         photoSrc: "/images/pos/pos-banner.png",
@@ -58,11 +60,13 @@ export const projects = [
     slug: "marigold",
     title: "inventory system",
     timeline: "2021-2022",
+    company: 'FREELANCE',
     team: [
       { name: "J. Pacaña", photoSrc: "/images/avatar-default.png" },
       { name: "Andrew Oplas", photoSrc: "/images/avatar-andrew-oplas.png" },
     ],
     role: "Full Stack Developer",
+    thumbnail: "/images/marigold/marigold-thumbnail.png",
     photos: [
       {
         photoSrc: "/images/marigold/marigold-banner.png",
@@ -111,11 +115,13 @@ export const projects = [
     slug: "digirent",
     title: "digirent",
     timeline: "2020-2021",
+    company: 'FREELANCE',
     team: [
       { name: "S. Shaibu", photoSrc: "/images/avatar-default.png" },
       { name: "Andrew Oplas", photoSrc: "/images/avatar-andrew-oplas.png" },
     ],
     role: "Frontend Developer",
+    thumbnail: "/images/digirent/digirent-thumbnail.png",
     photos: [
       {
         photoSrc: "/images/digirent/digirent-banner.png",
@@ -167,6 +173,7 @@ export const projects = [
   {
     slug: "goodtime",
     title: "goodtime",
+    company: 'ALGERT',
     timeline: "2022",
     team: [
       { name: "K. Adriano", photoSrc: "/images/avatar-default.png" },
@@ -174,6 +181,7 @@ export const projects = [
       { name: "Andrew Oplas", photoSrc: "/images/avatar-andrew-oplas.png" },
     ],
     role: "Web Developer",
+    thumbnail: "/images/goodtime/goodtime-thumbnail.png",
     photos: [
       {
         photoSrc: "/images/goodtime/goodtime-banner.png",
