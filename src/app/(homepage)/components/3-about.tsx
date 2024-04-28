@@ -82,7 +82,7 @@ export const AboutSection = () => {
           </p>
         </div>
 
-        <div className="bottom-0 left-auto right-0 top-auto -mt-12 block aspect-[709/736] w-full overflow-hidden rounded-ee-card md:absolute md:mt-0 md:w-[55%] lg:w-[44%]">
+        <div className="bottom-0 left-auto right-0 top-auto -mt-12 block aspect-[709/736] w-full overflow-hidden rounded-ee-card rounded-es-card sm:rounded-es-none md:absolute md:mt-0 md:w-[55%] lg:w-[44%]">
           <motion.div
             className="h-full w-full"
             style={{ translateY: translateY }}
@@ -100,7 +100,7 @@ export const AboutSection = () => {
       </div>
 
       <section className="pt-16" id="experience">
-        <h2 className="mx-auto max-w-[30rem] text-center text-h4 font-bold leading-none text-t-primary md:mx-0 md:text-left">
+        <h2 className="mx-auto max-w-[30rem] text-center text-h4 font-bold leading-tight text-t-primary md:mx-0 md:text-left">
           What’s my work experience?
         </h2>
 

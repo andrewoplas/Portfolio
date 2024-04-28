@@ -31,7 +31,7 @@ const Project = async ({ params }: Props) => {
     <section className="pb-32 md:pb-40 lg:pb-52">
       <Link
         href="/"
-        className="absolute left-8 top-10 flex gap-x-2 rounded-button px-4 py-3 text-base text-t-secondary transition-all duration-300 hover:bg-neutral-100 hover:text-t-primary"
+        className="absolute left-4 top-4 flex gap-x-2 rounded-button p-2 text-sm text-t-secondary transition-all duration-300 hover:bg-neutral-100  hover:text-t-primary md:left-8 md:top-10 md:px-4 md:py-3 md:text-base"
       >
         <svg
           width="26"
@@ -39,7 +39,7 @@ const Project = async ({ params }: Props) => {
           viewBox="0 0 26 26"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="-mt-[1px]"
+          className="md:-mt-[1px] mt-[1px] w-4 h-4 md:w-6 md:h-6"
         >
           <path
             fillRule="evenodd"
@@ -100,6 +100,7 @@ const Project = async ({ params }: Props) => {
           alt={project.photos[0].alt}
           className="w-full"
           quality={100}
+          priority
         />
       )}
 

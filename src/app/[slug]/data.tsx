@@ -118,11 +118,11 @@ export const projects = [
     role: "Frontend Developer",
     photos: [
       {
-        photoSrc: "/images/digirent/digirent-banner.png ",
+        photoSrc: "/images/digirent/digirent-banner.png",
         alt: "screenshot of the homepage on a macos display",
       },
       {
-        photoSrc: "/images/digirent/digirent-list-property-screen.png ",
+        photoSrc: "/images/digirent/digirent-list-property-screen.png",
         alt: "screenshot of list property screen",
         className: "lg:col-span-7",
       },
@@ -132,7 +132,7 @@ export const projects = [
         className: "lg:col-span-5",
       },
       {
-        photoSrc: "/images/digirent/digirent-add-property-screen.png ",
+        photoSrc: "/images/digirent/digirent-add-property-screen.png",
         alt: "screenshot of add property screen",
         className: "lg:col-span-12",
       },

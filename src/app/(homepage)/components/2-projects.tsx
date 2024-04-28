@@ -137,7 +137,7 @@ const ProjectItem = ({ work }: ProjectItemProps) => (
       width={50}
       height={50}
       className={cn(
-        "absolute -top-[2%] left-[5%] z-[1] h-40 w-40 opacity-0 transition-all duration-500 group-hover:-top-[10%] group-hover:opacity-100",
+        "absolute -top-[2%] left-[5%] z-[1] h-24 w-24 md:h-32 md:w-32 lg:h-40 lg:w-40 opacity-0 transition-all duration-500 group-hover:-top-[10%] group-hover:opacity-100",
         work.iconClassname,
       )}
     />
