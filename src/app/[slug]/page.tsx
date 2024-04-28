@@ -156,10 +156,13 @@ const Project = async ({ params }: Props) => {
             .filter((project) => project.slug !== params.slug)
             .slice(0, 3)
             .map((project) => (
-              <div className="relative overflow-hidden rounded-card shadow-xl shadow-neutral-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-neutral-200">
+              <div
+                key={project.slug}
+                className="relative overflow-hidden rounded-card shadow-xl shadow-neutral-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-neutral-200"
+              >
                 <Link
                   href={`/${project.slug}`}
-                  className="absolute h-full w-full"
+                  className="absolute left-0 top-0 h-full w-full"
                 ></Link>
 
                 <Image
