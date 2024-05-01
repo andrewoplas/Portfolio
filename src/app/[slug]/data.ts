@@ -166,7 +166,7 @@ export const projects = [
       },
       {
         title: "Tech stack",
-        content: ["NextJs", "Netlify"],
+        content: ["Next", "Typescript", "Netlify"],
       },
     ],
   },
