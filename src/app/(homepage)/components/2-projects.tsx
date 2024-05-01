@@ -105,8 +105,7 @@ export const ProjectsSection = () => (
       ))}
     </motion.div>
 
-    {/* TODO: Implement archive page */}
-    {/* <div className="mt-16 flex items-center justify-end lg:mt-24">
+    <div className="mt-16 flex items-center justify-end lg:mt-24">
       <Link
         href="archive"
         className="flex gap-4 bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text
@@ -115,7 +114,7 @@ export const ProjectsSection = () => (
       >
         Browse Projects <div className="-mt-1">→</div>
       </Link>
-    </div> */}
+    </div>
   </section>
 );
 
@@ -138,7 +137,7 @@ const ProjectItem = ({ work }: ProjectItemProps) => (
       width={50}
       height={50}
       className={cn(
-        "absolute -top-[2%] left-[5%] z-[1] h-24 w-24 md:h-32 md:w-32 lg:h-40 lg:w-40 opacity-0 transition-all duration-500 group-hover:-top-[10%] group-hover:opacity-100",
+        "absolute -top-[2%] left-[5%] z-[1] h-24 w-24 opacity-0 transition-all duration-500 group-hover:-top-[10%] group-hover:opacity-100 md:h-32 md:w-32 lg:h-40 lg:w-40",
         work.iconClassname,
       )}
     />
