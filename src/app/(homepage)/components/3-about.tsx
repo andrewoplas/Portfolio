@@ -119,7 +119,7 @@ export const AboutSection = () => {
                 viewBox="0 0 20 20"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="transition-transform duration-300 group-hover:-translate-y-1"
+                className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
               >
                 <path
                   d="M3.75 16.25L16.25 3.75M16.25 3.75L6.875 3.75M16.25 3.75V13.125"
