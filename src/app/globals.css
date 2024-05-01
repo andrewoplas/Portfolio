@@ -108,11 +108,11 @@ h6 {
 }
 
 ::-moz-selection {
-  color: white;
-  background: var(--color-primary);
+  color: var(--color-text-primary);
+  background: var(--color-secondary);
 }
 
 ::selection {
-  color: white;
-  background: var(--color-primary);
+  color: var(--color-text-primary);
+  background: var(--color-secondary);
 }
