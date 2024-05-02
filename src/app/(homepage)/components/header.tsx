@@ -1,34 +1,29 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import {
-  motion,
-  useMotionValueEvent,
-  useScroll,
-  useViewportScroll,
-} from "framer-motion";
-import Link from "next/link";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { useState } from "react";
+import { Link } from "react-scroll";
 
 const routes = [
   {
-    path: "/#hello",
+    path: "hello",
     name: "Hello",
   },
   {
-    path: "/#projects",
+    path: "projects",
     name: "Projects",
   },
   {
-    path: "/#about",
+    path: "about",
     name: "About",
   },
   {
-    path: "/#experience",
+    path: "experience",
     name: "Experience",
   },
   {
-    path: "/#contact",
+    path: "contact",
     name: "Contact",
   },
 ];
@@ -58,14 +53,21 @@ export const Header = () => {
               onClick={() => setActiveItem(route.path)}
             >
               <Link
+                spy={true}
+                smooth={true}
+                duration={300}
+                offset={-15}
                 className={cn(
-                  "relative z-10 block px-3 py-2 sm:px-5 sm:py-3 text-xs leading-none md:text-sm uppercase font-semibold",
+                  "relative z-10 block cursor-pointer px-3 py-2 text-xs font-semibold uppercase leading-none sm:px-5 sm:py-3 md:text-sm",
                   {
                     "text-background": !isActive,
                     "font-bold": activeItem === route.path,
                   },
                 )}
-                href={route.path}
+                to={route.path}
+                onSetActive={(item) => {
+                  setActiveItem(item);
+                }}
               >
                 {route.name}
               </Link>
@@ -74,7 +76,7 @@ export const Header = () => {
                 <motion.div
                   layoutId="active-item"
                   className={cn(
-                    "absolute left-0 top-0 h-full w-full rounded-[200px] bg-white/40 backdrop-blur-lg shadow-md",
+                    "absolute left-0 top-0 h-full w-full rounded-[200px] bg-white/40 shadow-md backdrop-blur-lg",
                     {
                       "bg-white/10": !isActive,
                     },
