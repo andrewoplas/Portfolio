@@ -53,53 +53,58 @@ export const AboutSection = () => {
   const translateY = useTransform(scrollYProgress, [0, 0.65], ["20%", "0%"]);
 
   return (
-    <section
-      ref={sectionRef}
-      id="about"
-      className="mx-auto max-w-section px-default py-16 md:py-20 lg:py-24"
-    >
-      <div className="relative grid grid-cols-1 rounded-card bg-primary md:grid-cols-12">
-        <div className="z-[1] col-span-8 self-center px-6 py-8 text-background sm:px-8 md:py-8 md:pl-8 lg:col-span-7 lg:py-14 lg:pl-14">
-          <h2 className="text-h6 font-bold">Hello there! I'm Andrew</h2>
-          <h3 className="my-4 text-h4 font-bold sm:text-h3 md:my-0">
-            <span className="text-secondary">Andrew</span>...who
-            <span className="hidden sm:inline">oo</span>?!
-          </h3>
-          <p className="text-body-large">
-            In 2014, with just a little knowledge about coding, my curiosity led
-            me to enter a web development contest. Countless late nights of
-            studying didn't secure a win, as I finished last, but that didn't
-            deter me—it was merely the starting line. This experience fueled my
-            growth, and today, I develop creative software solutions for
-            everyone from innovative startups to major corporations.
-            <br />
-            <br />
-            Right now, I'm focused on making user interfaces that are easy to
-            use and look great for our clients at Algert. I love mixing design
-            with coding—creating things that not only look good but also work
-            really well. When I'm not working, I like to check out new tech
-            tools, which keeps my coding skills sharp and up to date.
-          </p>
-        </div>
+    <>
+      <section
+        ref={sectionRef}
+        id="about"
+        className="px-default mx-auto max-w-section pt-16 md:pt-20 lg:pt-24"
+      >
+        <div className="relative grid grid-cols-1 rounded-card bg-primary md:grid-cols-12">
+          <div className="z-[1] col-span-8 self-center px-6 py-8 text-background sm:px-8 md:py-8 md:pl-8 lg:col-span-7 lg:py-14 lg:pl-14">
+            <h2 className="text-h6 font-bold">Hello there! I'm Andrew</h2>
+            <h3 className="my-4 text-h4 font-bold sm:text-h3 md:my-0">
+              <span className="text-secondary">Andrew</span>...who
+              <span className="hidden sm:inline">oo</span>?!
+            </h3>
+            <p className="text-body-large">
+              In 2014, with just a little knowledge about coding, my curiosity
+              led me to enter a web development contest. Countless late nights
+              of studying didn't secure a win, as I finished last, but that
+              didn't deter me—it was merely the starting line. This experience
+              fueled my growth, and today, I develop creative software solutions
+              for everyone from innovative startups to major corporations.
+              <br />
+              <br />
+              Right now, I'm focused on making user interfaces that are easy to
+              use and look great for our clients at Algert. I love mixing design
+              with coding—creating things that not only look good but also work
+              really well. When I'm not working, I like to check out new tech
+              tools, which keeps my coding skills sharp and up to date.
+            </p>
+          </div>
 
-        <div className="bottom-0 left-auto right-0 top-auto -mt-12 block aspect-[709/736] w-full overflow-hidden rounded-ee-card rounded-es-card sm:rounded-es-none md:absolute md:mt-0 md:w-[55%] lg:w-[44%]">
-          <motion.div
-            className="h-full w-full"
-            style={{ translateY: translateY }}
-          >
-            <Image
-              src="/images/homepage/headshot-andrew-oplas.png"
-              alt="headshot of Andrew Oplas"
-              width={951}
-              height={913}
-              className="relative h-full w-full object-contain"
-              quality={100}
-            />
-          </motion.div>
+          <div className="bottom-0 left-auto right-0 top-auto -mt-12 block aspect-[709/736] w-full overflow-hidden rounded-ee-card rounded-es-card sm:rounded-es-none md:absolute md:mt-0 md:w-[55%] lg:w-[44%]">
+            <motion.div
+              className="h-full w-full"
+              style={{ translateY: translateY }}
+            >
+              <Image
+                src="/images/homepage/headshot-andrew-oplas.png"
+                alt="headshot of Andrew Oplas"
+                width={951}
+                height={913}
+                className="relative h-full w-full object-contain"
+                quality={100}
+              />
+            </motion.div>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <section className="pt-16" id="experience">
+      <section
+        className="px-default mx-auto max-w-section pb-16 pt-16 md:pb-20 lg:pb-24"
+        id="experience"
+      >
         <h2 className="mx-auto max-w-[30rem] text-center text-h4 font-bold leading-tight text-t-primary md:mx-0 md:text-left">
           What’s my work experience?
         </h2>
@@ -168,6 +173,6 @@ export const AboutSection = () => {
           ))}
         </motion.div>
       </section>
-    </section>
+    </>
   );
 };

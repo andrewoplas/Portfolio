@@ -52,10 +52,7 @@ const animation: Variants = {
 };
 
 export const TestimonialSection = () => (
-  <section
-    id="testimonial"
-    className="px-default mx-auto max-w-screen-xl py-16 md:py-20 lg:py-24"
-  >
+  <section className="px-default mx-auto max-w-screen-xl py-16 md:py-20 lg:py-24">
     <h2 className="text-center text-h2 font-bold text-t-primary">
       Voices of Confidence
     </h2>
