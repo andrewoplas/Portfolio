@@ -1,5 +1,5 @@
 import { Footer } from "@/components/footer";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Source_Sans_3 } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -36,6 +36,12 @@ const body = Source_Sans_3({
   variable: "--font-family-body",
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#ffffff",
+};
 
 export const metadata: Metadata = {
   title: "Andrew Oplas",
