@@ -31,9 +31,22 @@ const technologies = {
   WEBFLOW: "Webflow",
   WORDPRESS: "WordPress",
   MYSQL: "MySQL",
+  CONVEX: "Convex",
 };
 
 export const projects = [
+  {
+    year: 2024,
+    title: "Quarter Quest",
+    madeAt: "",
+    builtWith: [
+      technologies.NEXT,
+      technologies.TAILWIND,
+      technologies.TYPESCRIPT,
+      technologies.CONVEX,
+    ],
+    link: "WIP",
+  },
   {
     year: 2024,
     title: "Andrew Oplas",
