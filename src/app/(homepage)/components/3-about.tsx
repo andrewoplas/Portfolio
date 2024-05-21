@@ -111,7 +111,7 @@ export const AboutSection = () => {
 
         <div className="mt-8 text-center md:mt-14 md:text-left">
           <Button
-            href="/andrew-oplas-resume.pdf"
+            href="/andrew-oplas-resume-05-2024.pdf"
             target="_blank"
             className="group"
             variant="outline"
