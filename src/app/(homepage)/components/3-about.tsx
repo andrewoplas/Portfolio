@@ -101,7 +101,7 @@ export const AboutSection = () => {
         </div>
       </section>
 
-      <section
+      {/* <section
         className="px-default mx-auto max-w-section pb-16 pt-16 md:pb-20 lg:pb-24"
         id="experience"
       >
@@ -172,7 +172,7 @@ export const AboutSection = () => {
             </div>
           ))}
         </motion.div>
-      </section>
+      </section> */}
     </>
   );
 };
