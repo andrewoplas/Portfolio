@@ -18,10 +18,10 @@ const routes = [
     path: "about",
     name: "About",
   },
-  {
-    path: "experience",
-    name: "Experience",
-  },
+  // {
+  //   path: "experience",
+  //   name: "Experience",
+  // },
   {
     path: "contact",
     name: "Contact",
