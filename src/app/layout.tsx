@@ -2,6 +2,7 @@ import { Footer } from "@/components/footer";
 import type { Metadata, Viewport } from "next";
 import { Source_Sans_3 } from "next/font/google";
 import localFont from "next/font/local";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const heading = localFont({
@@ -59,6 +60,7 @@ export default function RootLayout({
       <body className="overflow-x-hidden">
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
